@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles/style.css">
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.css' integrity='sha512-KOWhIs2d8WrPgR4lTaFgxI35LLOp5PRki/DxQvb7mlP29YZ5iJ5v8tiLWF7JLk5nDBlgPP1gHzw96cZ77oD7zQ==' crossorigin='anonymous'/>
+  <title>Weather App</title>
+</head>
+<body>
+  <div class="app-container">
+    <div class="weather-location">
+      <div class="weather-top">
+        <h1 class="weekday">Tuesday</h1>
+        <h3 class="date">20 Jun 2023</h3>
+        <p class="location">
+          <i class="fa-solid fa-location-dot"></i> <span class="city">London, GB</span>
+        </p>
+      </div>
+
+      <div class="weather-bottom">
+        <img src="https://openweathermap.org/img/wn/01d.png" alt="Icon" class="icon">
+        <h3 class="temp">29 °C</h3>
+        <p class="desc">Sunny</p>
+      </div>
+    </div>
+
+    <div class="weather-info">
+      <div class="info-top">
+        <div class="info-txt">
+          <p>MAX</p>
+          <p class="max">30°C</p>
+        </div>
+        <div class="info-txt">
+          <p>MIN</p>
+          <p class="min">15°C</p>
+        </div>
+        <div class="info-txt">
+          <p>FEELS LIKE</p>
+          <p class="feel">30°C</p>
+        </div>
+        <div class="info-txt">
+          <p>HUMIDITY</p>
+          <p class="humi">42%</p>
+        </div>
+        <div class="info-txt">
+          <p>WIND</p>
+          <p class="wind">7 km/h</p>
+        </div>
+      </div>
+
+      <div class="input-location">
+        <input type="text" name="input-city" class="input-city" placeholder="Change Location">
+        <i class="fa-solid fa-magnifying-glass" onclick="clickBtn()"></i>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

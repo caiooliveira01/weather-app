@@ -1,0 +1,185 @@
+@import url(https://fonts.googleapis.com/css?family=M+PLUS+1:100,200,300,regular,500,600,700,800,900);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'M PLUS 1', sans-serif;
+}
+
+body {
+  background-color: #343D4B;
+  color: #FFF;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 100vh;
+  width: 100%;
+}
+
+.app-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+
+  gap: 10px;
+  width: 100%;
+}
+
+.weather-location {
+  background-color: #8AC4DE;
+
+  width: 70%;
+  height: 20rem;
+  
+  padding: 20px;
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  border-radius: 15px;
+}
+
+.weather-top .weekday {
+  font-size: 2.5rem;
+}
+
+.weather-top .date {
+  font-weight: 400;
+  font-size: 1rem;
+}
+
+.weather-top .location {
+  font-size: 1.1rem;
+
+  margin-top: 8px;
+}
+
+.weather-bottom img.icon {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+}
+
+.weather-bottom .temp {
+  font-size: 2.5rem;
+  margin: 5px 0;
+}
+
+.weather-bottom .desc {
+  font-size: 1.5rem;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+/* --------------- */
+
+.weather-info {
+  background-color: #222831;
+
+  width: 70%;
+
+  padding: 20px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 20px;
+
+  border-radius: 15px;
+}
+
+.info-txt {
+  display: flex;
+  justify-content: space-between;
+
+  width: 100%;
+
+  margin-bottom: 10px;
+
+  font-size: 1.1rem;
+}
+
+.info-txt > p:nth-child(odd) {
+  font-weight: bold;
+
+  letter-spacing: 2px;
+}
+
+.input-location {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  width: 100%;
+}
+
+.input-location input {
+  background-color: #505fd3;
+  color: #FFF;
+  
+  width: 100%;
+  height: 2rem;
+
+  border: none;
+  border-radius: .5rem;
+
+  padding-left: 2.5rem;
+
+  background-image: url(https://img.icons8.com/ios-filled/24/ffffff/marker.png);
+  background-position-y: center;
+  background-position-x: 0.5rem;
+  background-repeat: no-repeat;
+
+  position: relative;
+}
+
+.input-location input::placeholder {
+  color: #FFF;
+
+  font-size: 1.1rem;
+}
+
+.input-location input:focus {
+  border: none;
+  outline: 0;
+
+  color: #FFF;
+}
+
+.input-location i {
+  cursor: pointer;
+
+  padding: 7px;
+
+  border-radius: .5rem;
+}
+
+.input-location i:hover, .input-location i:active {
+  cursor: pointer;
+
+  background-color: #505fd3;
+
+  transition: all .3s;
+}
+
+@media screen and (min-width: 765px) {
+  .weather-location {
+    max-width: 28.125rem;
+    height: 25rem;
+  }
+  
+  .weather-info {
+    max-width: 28.125rem;
+    height: 23rem;
+  }
+
+  .input-location {
+    max-width: 21.875rem;
+
+    margin: auto;
+  }
+}
