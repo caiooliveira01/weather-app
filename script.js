@@ -24,11 +24,20 @@ async function searchCity(city) {
   showData(data)
 }
 
+// Para o addEventListener funcionar corretamente o inputCity tem que estar fora da função
+const inputCity = document.querySelector(".input-city")
+
 function clickBtn() {
-  const city = document.querySelector(".input-city").value
+  const city = inputCity.value
 
   searchCity(city)
 }
+
+inputCity.addEventListener("keypress", function (event) {
+  if (event.key === "Enter" || event.keyCode === 13) {
+    clickBtn()
+  }
+})
 
 function showData(data) {
   document.querySelector(".city").innerHTML = `${data.name}, ${data.sys.country}`
